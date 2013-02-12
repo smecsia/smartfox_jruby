@@ -1,5 +1,17 @@
 ---
-JARS: []
+JARS:
+- com.smartfox2x.client:sfs2x-client-core:jar:1.0.4
+- com.smartfox2x.client:sfs2x-api-java:jar:1.0.4
+- org.slf4j:slf4j-log4j12:jar:1.5.10
+- io.netty:netty:jar:3.5.3.Final
+- commons-beanutils:commons-beanutils:jar:1.7.0
+- net.sf.ezmorph:ezmorph:jar:1.0.6
+- net.sf.json-lib:json-lib:jar:jdk5:2.2.3
+- commons-lang:commons-lang:jar:2.5
+- commons-collections:commons-collections:jar:3.2.1
+- commons-logging:commons-logging:jar:1.1.1
+- org.slf4j:slf4j-api:jar:1.5.10
+- log4j:log4j:jar:1.2.14
 GEMS:
 - activesupport:3.2.12
 - json:1.7.7
