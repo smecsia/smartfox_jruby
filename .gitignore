@@ -1,0 +1,8 @@
+# Ignore doubleshot files
+.doubleshot*
+.classpath.cache
+
+# Ignore IDEA-specific files
+*.ipr
+.idea
+*.iml

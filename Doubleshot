@@ -1,0 +1,38 @@
+# encoding: utf-8
+require 'pathname'
+require File.join(File.dirname(File.expand_path(__FILE__)),"lib", "smartfox_jruby")
+
+Doubleshot.new do |config|
+
+  config.project = "smartfox_jruby"
+  config.version = SmartfoxJruby::VERSION
+
+  config.mvn_repository 'http://maven.smecsia.me/'
+  config.jar 'com.smartfox2x.client:sfs2x-client-core:jar:1.0.4'
+  config.jar 'com.smartfox2x.client:sfs2x-api-java:jar:1.0.4'
+  config.jar 'org.slf4j:slf4j-log4j12:jar:1.5.10'
+  config.jar 'io.netty:netty:jar:3.5.3.Final'
+  config.jar 'commons-beanutils:commons-beanutils:jar:1.7.0'
+  config.jar 'net.sf.ezmorph:ezmorph:jar:1.0.6'
+  config.jar 'net.sf.json-lib:json-lib:jar:jdk5:2.2.3'
+  config.jar 'commons-lang:commons-lang:jar:2.5'
+  config.jar 'commons-collections:commons-collections:jar:3.2.1'
+  config.jar 'commons-logging:commons-logging:jar:1.1.1'
+
+  config.gem 'activesupport', '~> 3.2.8'
+  config.gem 'json'
+  config.gem 'rspec', '~> 2.10.0'
+
+  config.gemspec do |spec|
+    spec.summary = "Smartfox client for jruby"
+    spec.description = <<-DESCRIPTION
+    Allows to connect and easily process messages from and to SmartFox game server
+    DESCRIPTION
+
+    spec.homepage = "https://github.com/smecsia/smartfox_jruby"
+    spec.author = "Ilya Sadykov"
+    spec.email = "smecsia@gmail.com"
+    spec.license = "Apache 2.0"
+  end
+
+end
