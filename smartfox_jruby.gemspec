@@ -13,6 +13,9 @@ Gem::Specification.new do |s|
   s.description = %q{Allows to connect and easily process messages from and to SmartFox game server}
 
   s.add_development_dependency 'rspec', '~> 2.10.0'
+  s.add_dependency 'json'
+  s.add_dependency 'activesupport', '~> 3.2.8'
+
   s.require_path = 'lib'
   s.files = Dir['{lib,spec}/**/*','README*']
 end

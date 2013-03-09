@@ -10,6 +10,6 @@ module SmartfoxJruby
   autoload :SfsAdapter, MYDIR.join('smartfox_jruby/sfs_adapter')
   autoload :SfsWorker, MYDIR.join('smartfox_jruby/sfs_worker')
   autoload :SFSUtil, MYDIR.join('smartfox_jruby/common')
-  VERSION = "0.2.3"
+  VERSION = "0.2.4"
 end
 
