@@ -22,7 +22,8 @@ adapter.process! {
   request(:GetProducts, :productType => :ITEM).expect(:GetProductsOK) { |data|
     puts "Whoa! I've got the following products: #{data.to_json}"
 
-    request(:BuyProduct, {:productId => data[:data].first[:id]}, :serialize_opts => {:productId_type => :long}
+    request(:BuyProduct, {:productId => data[:data].first[:id]},
+                        :serialize_opts => {:productId_type => :long}
       ).expect(:BuyProductOK) { |data|
           puts "Whoa! I've bought product! #{data.to_json}"
       }
@@ -54,8 +55,6 @@ to specify these java libraries as a dependencies:
 * commons-lang:commons-lang:jar:2.5
 * commons-collections:commons-collections:jar:3.2.1
 * commons-logging:commons-logging:jar:1.1.1
-
-```
 
 Copyright (c) 2013 smecsia
 
