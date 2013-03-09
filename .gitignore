@@ -2,6 +2,7 @@
 .doubleshot*
 .classpath.cache
 target
+*.gem
 
 # Ignore IDEA-specific files
 *.ipr

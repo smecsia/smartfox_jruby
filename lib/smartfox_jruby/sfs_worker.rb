@@ -86,8 +86,8 @@ module SmartfoxJruby
 
     class ContextWorker
 
-      def request(name, data = {})
-        @worker.request(name, data, :context => @context)
+      def request(name, data = {}, opts = {})
+        @worker.request(name, data, opts.merge(:context => @context))
       end
 
       def append_processor(opts = {}, &block)
@@ -133,7 +133,7 @@ module SmartfoxJruby
       end
 
       def request(name, data = {}, opts = {})
-        debug "create request #{name} with context #{opts[:context]}"
+        debug "create request #{name} with context #{opts[:context]} and opts #{opts[:serialize_opts]}"
         data = data.to_sfsobject(opts[:serialize_opts]) if data.is_a?(Hash)
         req = Request.new(name, data)
         if !opts[:context].blank? && opts[:context].is_a?(Processor)
