@@ -4,6 +4,9 @@ This is a small library helping you to interact with a SmartFox server.
 It's main purpose is to test the backend extension using the requests.
 It requires JRuby and some jar-dependencies in a classpath.
 
+Check out [this blog post](http://smecsia.me/blog/78/Smartfox+Integration+testing+with+Cucumber) 
+to see how this library can be used.
+
 ## What it gives
 
 You can easily connect and interact with a SmartFox server to test your server extension requests
